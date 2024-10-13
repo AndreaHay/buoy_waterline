@@ -1,0 +1,2 @@
+ID,mean,median,stdev,std_err,Q1,Q3,IQR,no_waterlines_detected,no_images_total
+Test_Buoy,17.10,17.20,1.17,0.28,16.07,17.75,1.68,18.00,24.00

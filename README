@@ -1,0 +1,106 @@
+############################################################################################
+BUOY WATERLINE MEASUREMENT SCRIPTS
+
+Created 2021, updated February 2023
+Andrea Hay
+############################################################################################
+
+This collection of scripts takes videos of scales attached to floating GNSS buoys and
+determines the distance from the waterline to a reference mark on the scale. Note the settings
+will likely require adjusting depending on the particular environment in which the videos are
+taken.
+
+The collection of scripts contains:
+    - buoy_float_level.sh       the main workflow script
+    - buoy.py                   the main processing script, called by buoy_float_level.sh
+
+    - buoy_single_image.sh      a workflow script designed to test settings before running buoy_float_level.sh
+    - buoy_single_image.py      a processing script called by buoy_single_image.sh
+
+    - additional tools
+        - enhance_contrast.py       converts image to greyscale and increases contrast (called by workflow script buoy_float_level.sh)
+        - buoy_results_plot.py      plots results following waterline detection (called by workflow script buoy_float_level.sh)
+        - buoy_run_multi.sh         processes multiple scales (i.e. workflow script to call buoy_float_level.sh)
+        - buoy_gif.py               combines waterline images into a gif video for visual checking (called by workflow script buoy_float_level.sh)
+        - buoy_combine_stats.sh     collects results from each scale and puts them into a single csv
+
+For each .sh script, use flag -h to print help information.
+
+---------------------
+TO PROCESS ONE VIDEO
+---------------------
+- first, you may want to test the settings on a single image to make sure that the settings are suitable for the video.
+    This can be done with buoy_single_image.sh (see below)
+- once you are happy with settings, copy video of floating scale (in .MOV format) into a directory, e.g. /buoy_scales/12A/
+- call the buoy_float_level.sh workflow script, with at least the 'directory' (-d) and 'name' (-n) flags, e.g.
+        buoy_float_level.sh -d /buoy_scales/12A/ -n 12A
+- this will produce:
+    - an output subdirectory, with various intermediate results saved in further subdirectories
+    - three plots of results and one gif of the waterline on each image for visual checking
+    - two csv files, one with the waterline to reference mark distance for each image, and one with the summary statistics
+    - a {scale}.log and {scale}.err file, which contain the output from the workflow script and any errors (CHECK THE ERRORS! Ignore the warnings)
+- visually check the results plot and gif. Check the 'failed' subdirectory, and reprocess these if needed.
+- once happy, delete all the subdirectories because the images take up a lot of space
+
+--------------------------------------------------------------
+TIPS FOR ADJUSTING SETTINGS
+--------------------------------------------------------------
+- if it does not work on the first try, the default settings are likely not well suited to the video
+- the settings to try adjusting are:
+    -m  minimum circle size in pixels
+        - if too many circles are being detected, try making this bigger (looking at the images in /output/circle_detection/ will help)
+    -x  maximum circle size in  pixels
+        - try making this smaller
+    -s  circle sensitivity threshold
+        - try making this higher (look at the images in /output/circle_detection/*radii and gauge this using the colourbar scale)
+    -f  colour extraction threshold
+        - if more than just the circles are being extracted, try making this lower. If not all the circles are extracted, make it higher (check /output/${colour}/ )
+    -c  colour to extract
+        - you can try extracting e.g. 'red' rather than 'snow' (or change depending on the colour of your scales)
+    -t  minimum waterline extraction threshold
+        - you can try making this even lower, which will make the edge detection even more sensitive, but try to avoid doing this
+    -e  enhance images
+        - this is a true or false (t/f) value. If the waterline isn't being detected at all, try making this true
+    -o  contrast value
+        - add more or less contrast to the 'enhancement', values from 1 to 4 are usually reasonable
+    -r  number of frames per second to extract
+        - two is probably fine, but can go more or less (particularly when testing - 0.1 fps is a good idea)
+
+----------------------------------------------
+TO TEST SETTINGS ON A SINGLE IMAGE
+----------------------------------------------
+- using the same directory set up as above, call buoy_single_image.sh with the same flags as above, e.g.
+        buoy_single_image.sh -d /buoy_scales/12A/ -n 12A
+- try different settings until you are happy with the results
+- each run will take ~ 30 seconds
+- by looking at each of the output plots, you should be able to figure out what settings to change
+- delete everything (except the video) in the directory, and use the same flags with the buoy_float_level.sh script
+
+----------------------------------------------
+AN IMPORTANT NOTE
+----------------------------------------------
+- one critical setting that does not rely on defaults is the 'region of interest' (ROI)
+- this is the box around the waterline itself, and requires the Top and Left coordinate (in the 'scale coordinate' system which the processing sorts out)
+- good values for the ROI can be found by checking the ROI plot produced by running the buoy_single_image.sh
+- the ROI box will go from the ROI_top you set to 100 micrometers below this
+- when running the buoy_float_level.sh, set ROI_top and ROI_left with -a and -b flags
+- if running buoy_run_multi.sh, edit to include the -a and -b flags
+- (these settings are treated differently as a smaller box produces more reliably results, but makes using a default value more difficult. We have therefore
+opted to use no default value, which means you have to have a look and define it each time).
+
+----------------------------------------------
+TO PROCESS MULTIPLE VIDEOS
+----------------------------------------------
+- copy all the videos into named subdirectories, e.g. /buoy_scales/8A /buoy_scales/12A etc
+- call buoy_run_multi.sh with the directory flag and scale flags, e.g.
+        buoy_run_multi.sh -d /buoy_scales/ -s 8A -s 12A -s 16A
+- this will call buoy_float_level.sh for each scale, using default settings
+- to adjust settings, either process each scale individually and use the flags, or edit the buoy_run_multi.sh script
+
+----------------------------------------------
+TO COMBINE RESULTS FROM MULTIPLE VIDEOS
+----------------------------------------------
+- call buoy_combine_stats.sh with the directory flag and scale flags, e.g.
+        buoy_combine_stats.sh -d /buoy_scales/ -s 8A -s 12A -s 16A
+
+

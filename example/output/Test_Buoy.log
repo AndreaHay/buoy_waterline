@@ -1,0 +1,304 @@
+starting python
+processing photo: Test_Buoy0001_snow.png
+number of circles detected: 27
+tform_resid 0.7620875260327292
+image rectified
+waterline detected!
+waterline_RL:  17.75
+orig_image:  Test_Buoy0001
+name_scale:  Test_Buoy
+image number:  0001
+waterline detected
+**RESULTS**
+[[ 1.   17.75]]
+
+
+processing photo: Test_Buoy0002_snow.png
+number of circles detected: 27
+tform_resid 0.7756979337063254
+image rectified
+waterline detected!
+waterline_RL:  17.75
+orig_image:  Test_Buoy0002
+name_scale:  Test_Buoy
+image number:  0002
+waterline detected
+**RESULTS**
+[[ 2.   17.75]]
+
+
+processing photo: Test_Buoy0003_snow.png
+number of circles detected: 27
+tform_resid 0.8185583280837557
+image rectified
+waterline detected!
+waterline_RL:  16.44999999999999
+orig_image:  Test_Buoy0003
+name_scale:  Test_Buoy
+image number:  0003
+waterline detected
+**RESULTS**
+[[ 3.   16.45]]
+
+
+processing photo: Test_Buoy0004_snow.png
+number of circles detected: 27
+tform_resid 0.8386414201049792
+image rectified
+waterline detected!
+waterline_RL:  18.150000000000006
+orig_image:  Test_Buoy0004
+name_scale:  Test_Buoy
+image number:  0004
+waterline detected
+**RESULTS**
+[[ 4.   18.15]]
+
+
+processing photo: Test_Buoy0005_snow.png
+number of circles detected: 27
+tform_resid 0.5901449572051636
+image rectified
+waterline detected!
+waterline_RL:  15.650000000000006
+orig_image:  Test_Buoy0005
+name_scale:  Test_Buoy
+image number:  0005
+waterline detected
+**RESULTS**
+[[ 5.   15.65]]
+
+
+processing photo: Test_Buoy0006_snow.png
+number of circles detected: 27
+tform_resid 0.6226295657140438
+image rectified
+waterline detected!
+waterline_RL:  18.05000000000001
+orig_image:  Test_Buoy0006
+name_scale:  Test_Buoy
+image number:  0006
+waterline detected
+**RESULTS**
+[[ 6.   18.05]]
+
+
+processing photo: Test_Buoy0007_snow.png
+number of circles detected: 27
+tform_resid 0.6418846568007167
+image rectified
+waterline detected!
+waterline_RL:  15.650000000000006
+orig_image:  Test_Buoy0007
+name_scale:  Test_Buoy
+image number:  0007
+waterline detected
+**RESULTS**
+[[ 7.   15.65]]
+
+
+processing photo: Test_Buoy0008_snow.png
+number of circles detected: 27
+tform_resid 0.614510186014551
+image rectified
+waterline detected!
+waterline_RL:  18.849999999999994
+orig_image:  Test_Buoy0008
+name_scale:  Test_Buoy
+image number:  0008
+waterline detected
+**RESULTS**
+[[ 8.   18.85]]
+
+
+processing photo: Test_Buoy0009_snow.png
+number of circles detected: 27
+tform_resid 0.5425295393760201
+image rectified
+waterline detected!
+waterline_RL:  15.75
+orig_image:  Test_Buoy0009
+name_scale:  Test_Buoy
+image number:  0009
+waterline detected
+**RESULTS**
+[[ 9.   15.75]]
+
+
+processing photo: Test_Buoy0010_snow.png
+number of circles detected: 27
+tform_resid 0.5308648037964421
+image rectified
+waterline detected!
+waterline_RL:  17.349999999999994
+orig_image:  Test_Buoy0010
+name_scale:  Test_Buoy
+image number:  0010
+waterline detected
+**RESULTS**
+[[10.   17.35]]
+
+
+processing photo: Test_Buoy0011_snow.png
+number of circles detected: 27
+tform_resid 0.6924707515682352
+image rectified
+waterline detected!
+waterline_RL:  16.94999999999999
+orig_image:  Test_Buoy0011
+name_scale:  Test_Buoy
+image number:  0011
+waterline detected
+**RESULTS**
+[[11.   16.95]]
+
+
+processing photo: Test_Buoy0012_snow.png
+number of circles detected: 27
+tform_resid 0.5232843381803348
+image rectified
+waterline detected!
+waterline_RL:  17.25
+orig_image:  Test_Buoy0012
+name_scale:  Test_Buoy
+image number:  0012
+waterline detected
+**RESULTS**
+[[12.   17.25]]
+
+
+processing photo: Test_Buoy0013_snow.png
+number of circles detected: 27
+tform_resid 0.4759784905110249
+image rectified
+waterline detected!
+waterline_RL:  17.55000000000001
+orig_image:  Test_Buoy0013
+name_scale:  Test_Buoy
+image number:  0013
+waterline detected
+**RESULTS**
+[[13.   17.55]]
+
+
+processing photo: Test_Buoy0014_snow.png
+number of circles detected: 27
+tform_resid 0.5557524585501865
+image rectified
+waterline detected!
+waterline_RL:  15.949999999999989
+orig_image:  Test_Buoy0014
+name_scale:  Test_Buoy
+image number:  0014
+waterline detected
+**RESULTS**
+[[14.   15.95]]
+
+
+processing photo: Test_Buoy0015_snow.png
+number of circles detected: 27
+tform_resid 0.5441077749207176
+image rectified
+waterline detected!
+waterline_RL:  16.650000000000006
+orig_image:  Test_Buoy0015
+name_scale:  Test_Buoy
+image number:  0015
+waterline detected
+**RESULTS**
+[[15.   16.65]]
+
+
+processing photo: Test_Buoy0016_snow.png
+number of circles detected: 27
+tform_resid 0.6047307168136482
+image rectified
+waterline detected!
+waterline_RL:  19.55000000000001
+orig_image:  Test_Buoy0016
+name_scale:  Test_Buoy
+image number:  0016
+waterline detected
+**RESULTS**
+[[16.   19.55]]
+
+
+processing photo: Test_Buoy0017_snow.png
+number of circles detected: 27
+tform_resid 0.6505480798953704
+image rectified
+waterline detected!
+waterline_RL:  15.349999999999994
+orig_image:  Test_Buoy0017
+name_scale:  Test_Buoy
+image number:  0017
+waterline detected
+**RESULTS**
+[[17.   15.35]]
+
+
+processing photo: Test_Buoy0018_snow.png
+number of circles detected: 24
+tform_resid 0.5143621063848726
+image rectified
+trying waterline threshold: 35
+waterline detected!
+waterline_RL:  17.150000000000006
+orig_image:  Test_Buoy0018
+name_scale:  Test_Buoy
+image number:  0018
+waterline detected
+**RESULTS**
+[[18.   17.15]]
+
+
+processing photo: Test_Buoy0019_snow.png
+number of circles detected: 18
+tform_resid 75.75258055601893
+FAILED
+
+processing photo: Test_Buoy0020_snow.png
+number of circles detected: 24
+tform_resid 16.71303109101569
+number of circles detected: 21
+tform_resid 16.736067594711223
+number of circles detected: 18
+tform_resid 16.719045737716133
+FAILED
+
+processing photo: Test_Buoy0021_snow.png
+number of circles detected: 24
+tform_resid 16.750928924763553
+number of circles detected: 21
+tform_resid 16.77699354420708
+number of circles detected: 18
+tform_resid 16.813223893221828
+FAILED
+
+processing photo: Test_Buoy0022_snow.png
+number of circles detected: 24
+tform_resid 16.668041185633093
+number of circles detected: 21
+tform_resid 16.780813467132088
+number of circles detected: 18
+tform_resid 16.72768379930694
+FAILED
+
+processing photo: Test_Buoy0023_snow.png
+number of circles detected: 24
+tform_resid 22.734887008997603
+number of circles detected: 21
+tform_resid 16.80828605731555
+number of circles detected: 18
+tform_resid 16.732115031843566
+FAILED
+
+processing photo: Test_Buoy0024_snow.png
+number of circles detected: 24
+tform_resid 23.11668042749132
+number of circles detected: 21
+tform_resid 16.83233750231789
+number of circles detected: 18
+tform_resid 16.86334490550615
+FAILED
+
